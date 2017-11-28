@@ -215,6 +215,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AceroGMaquinaria\Agregar.cshtml" />
     <Content Include="Views\AceroGMaquinaria\Consultar.cshtml" />
+    <Content Include="Views\AceroGMaquinaria\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

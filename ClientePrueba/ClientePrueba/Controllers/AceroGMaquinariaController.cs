@@ -26,19 +26,17 @@ namespace ClientePrueba.Controllers
             ViewBag.acerogm = C.verTodos();
             return View();
         }
-        public ActionResult Details(string idMaterial)
+
+        public ActionResult Edit(int idMaterial)
         {
-            ViewBag.acerogm = C.encontrarUno(idMaterial);
+            string ID = idMaterial.ToString();
+            ViewBag.acccerogm = C.encontrarUno(ID);
             return View();
         }
-        public ActionResult Edit(string idMaterial)
+        public void Delete(int idMaterial)
         {
-            ViewBag.acccerogm = C.encontrarUno(idMaterial);
-            return View();
-        }
-        public void Delete(string id)
-        {
-            MaterialAceroGM.AceroGMaquinaria acerogm = C.encontrarUno(id);
+            string ID = idMaterial.ToString();
+            MaterialAceroGM.AceroGMaquinaria acerogm = C.encontrarUno(ID);
             C.eliminar(acerogm);
         }
     }

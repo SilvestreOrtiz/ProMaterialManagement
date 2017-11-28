@@ -53,9 +53,8 @@
             @item.Cantidad
         </th>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idMaterial  }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idMaterial }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idMaterial })
+            @Html.ActionLink("Edit", "Edit", new { idMaterial = item.idMaterial  }) |
+            @Html.ActionLink("Delete", "Delete", new { idMaterial = item.idMaterial })
         </td>
     </tr>
 }
