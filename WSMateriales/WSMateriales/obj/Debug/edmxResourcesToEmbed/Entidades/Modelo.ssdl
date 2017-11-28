@@ -34,6 +34,16 @@
     <Property Name="Espesor" Type="text" />
     <Property Name="Cantidad" Type="int" />
   </EntityType>
+  <EntityType Name="HistorialMateriales">
+    <Key>
+      <PropertyRef Name="id_Material" />
+    </Key>
+    <Property Name="id_Material" Type="int" Nullable="false" />
+    <Property Name="EntradaMaterial" Type="int" Nullable="false" />
+    <Property Name="SalidaMaterial" Type="int" />
+    <Property Name="FechaEntrada" Type="date" />
+    <Property Name="FechaSalida" Type="date" />
+  </EntityType>
   <EntityType Name="Metales">
     <Key>
       <PropertyRef Name="idMaterial" />
@@ -44,6 +54,24 @@
     <Property Name="SemiFabricado" Type="text" />
     <Property Name="Estado" Type="text" />
     <Property Name="Cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="idReport" />
+    </Key>
+    <Property Name="idReport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Material" Type="int" />
+    <Property Name="id_Usuario" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -60,7 +88,10 @@
     <EntitySet Name="AceroGHerramienta" EntityType="Self.AceroGHerramienta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AceroGMaquinaria" EntityType="Self.AceroGMaquinaria" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AceroInoxidable" EntityType="Self.AceroInoxidable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorialMateriales" EntityType="Self.HistorialMateriales" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Metales" EntityType="Self.Metales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reporte" EntityType="Self.Reporte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

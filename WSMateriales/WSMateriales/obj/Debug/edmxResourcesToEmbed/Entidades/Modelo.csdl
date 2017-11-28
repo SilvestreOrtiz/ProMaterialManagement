@@ -34,6 +34,16 @@
     <Property Name="Espesor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Cantidad" Type="Int32" />
   </EntityType>
+  <EntityType Name="HistorialMateriales">
+    <Key>
+      <PropertyRef Name="id_Material" />
+    </Key>
+    <Property Name="id_Material" Type="Int32" Nullable="false" />
+    <Property Name="EntradaMaterial" Type="Int32" Nullable="false" />
+    <Property Name="SalidaMaterial" Type="Int32" />
+    <Property Name="FechaEntrada" Type="DateTime" Precision="0" />
+    <Property Name="FechaSalida" Type="DateTime" Precision="0" />
+  </EntityType>
   <EntityType Name="Metales">
     <Key>
       <PropertyRef Name="idMaterial" />
@@ -44,6 +54,24 @@
     <Property Name="SemiFabricado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Estado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Cantidad" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="idReport" />
+    </Key>
+    <Property Name="idReport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Material" Type="Int32" />
+    <Property Name="id_Usuario" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -60,7 +88,10 @@
     <EntitySet Name="AceroGHerramienta" EntityType="Self.AceroGHerramienta" />
     <EntitySet Name="AceroGMaquinaria" EntityType="Self.AceroGMaquinaria" />
     <EntitySet Name="AceroInoxidable" EntityType="Self.AceroInoxidable" />
+    <EntitySet Name="HistorialMateriales" EntityType="Self.HistorialMateriales" />
     <EntitySet Name="Metales" EntityType="Self.Metales" />
+    <EntitySet Name="Reporte" EntityType="Self.Reporte" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
   </EntityContainer>
 </Schema>

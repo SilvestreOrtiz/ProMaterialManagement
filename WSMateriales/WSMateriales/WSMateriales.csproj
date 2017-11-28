@@ -79,10 +79,12 @@
       <DependentUpon>Modelo.edmx</DependentUpon>
       <LastGenOutput>Modelo.cs</LastGenOutput>
     </Content>
-    <Content Include="Services\CRUD\MaterialAceroInox.svc" />
+    <Content Include="Services\CRUD\AddUser.svc" />
     <Content Include="Services\CRUD\MaterialAceroGH.svc" />
     <Content Include="Services\CRUD\MaterialAceroGM.svc" />
+    <Content Include="Services\CRUD\MaterialAceroInoxi.svc" />
     <Content Include="Services\CRUD\Metal.svc" />
+    <Content Include="Services\Reporte\ReportService.svc" />
     <Content Include="Services\Seguridad\ServicioLogin.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -96,6 +98,9 @@
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidades\AceroInoxidable.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\HistorialMateriales.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Metales.cs">
@@ -116,14 +121,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Modelo.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Reporte.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\sysdiagrams.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Usuario.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CRUD\MaterialAceroInox.svc.cs">
-      <DependentUpon>MaterialAceroInox.svc</DependentUpon>
+    <Compile Include="Services\CRUD\AddUser.svc.cs">
+      <DependentUpon>AddUser.svc</DependentUpon>
     </Compile>
-    <Compile Include="Services\CRUD\IMaterialAceroInox.cs" />
+    <Compile Include="Services\CRUD\IAddUser.cs" />
+    <Compile Include="Services\CRUD\IMaterialAceroInoxi.cs" />
     <Compile Include="Services\CRUD\IMaterialAceroGH.cs" />
     <Compile Include="Services\CRUD\IMaterialAceroGM.cs" />
     <Compile Include="Services\CRUD\IMetal.cs" />
@@ -133,8 +145,15 @@
     <Compile Include="Services\CRUD\MaterialAceroGM.svc.cs">
       <DependentUpon>MaterialAceroGM.svc</DependentUpon>
     </Compile>
+    <Compile Include="Services\CRUD\MaterialAceroInoxi.svc.cs">
+      <DependentUpon>MaterialAceroInoxi.svc</DependentUpon>
+    </Compile>
     <Compile Include="Services\CRUD\Metal.svc.cs">
       <DependentUpon>Metal.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Reporte\IReportService.cs" />
+    <Compile Include="Services\Reporte\ReportService.svc.cs">
+      <DependentUpon>ReportService.svc</DependentUpon>
     </Compile>
     <Compile Include="Services\Seguridad\IServicioLogin.cs" />
     <Compile Include="Services\Seguridad\ServicioLogin.svc.cs">
@@ -143,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Services\Operaciones\" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Entidades\Modelo.edmx">

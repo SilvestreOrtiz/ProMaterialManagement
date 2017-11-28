@@ -6,7 +6,6 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WSMateriales.Entidades;
-
 namespace WSMateriales.Services.Seguridad
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IServicioLogin" en el código y en el archivo de configuración a la vez.
