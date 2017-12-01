@@ -1,0 +1,16 @@
+body
+{
+	font-family: 'Open-Sans', sans-serif;
+}
+#header-container
+{
+	background: url(img/LogoAuto.png);
+}
+img
+{
+	width: 30%;
+}
+.container
+{
+	padding: 25px;
+}
