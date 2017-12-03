@@ -16,6 +16,9 @@ namespace WSMateriales.Entidades
     {
         public int idReport { get; set; }
         public Nullable<int> id_Material { get; set; }
-        public Nullable<int> id_Usuario { get; set; }
+        public Nullable<System.DateTime> fecha_report { get; set; }
+        public string admin_proyecto { get; set; }
+        public string nombre_proyecto { get; set; }
+        public string descripcion_proyecto { get; set; }
     }
 }

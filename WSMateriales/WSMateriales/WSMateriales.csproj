@@ -83,8 +83,8 @@
     <Content Include="Services\CRUD\MaterialAceroGH.svc" />
     <Content Include="Services\CRUD\MaterialAceroGM.svc" />
     <Content Include="Services\CRUD\MaterialAceroInoxi.svc" />
-    <Content Include="Services\CRUD\Metal.svc" />
-    <Content Include="Services\Reporte\ReportService.svc" />
+    <Content Include="Services\CRUD\MaterialMetal.svc" />
+    <Content Include="Services\Report\ServiceReport.svc" />
     <Content Include="Services\Seguridad\ServicioLogin.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -124,9 +124,6 @@
     <Compile Include="Entidades\Reporte.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\sysdiagrams.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Entidades\Usuario.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
@@ -138,7 +135,7 @@
     <Compile Include="Services\CRUD\IMaterialAceroInoxi.cs" />
     <Compile Include="Services\CRUD\IMaterialAceroGH.cs" />
     <Compile Include="Services\CRUD\IMaterialAceroGM.cs" />
-    <Compile Include="Services\CRUD\IMetal.cs" />
+    <Compile Include="Services\CRUD\IMaterialMetal.cs" />
     <Compile Include="Services\CRUD\MaterialAceroGH.svc.cs">
       <DependentUpon>MaterialAceroGH.svc</DependentUpon>
     </Compile>
@@ -148,12 +145,12 @@
     <Compile Include="Services\CRUD\MaterialAceroInoxi.svc.cs">
       <DependentUpon>MaterialAceroInoxi.svc</DependentUpon>
     </Compile>
-    <Compile Include="Services\CRUD\Metal.svc.cs">
-      <DependentUpon>Metal.svc</DependentUpon>
+    <Compile Include="Services\CRUD\MaterialMetal.svc.cs">
+      <DependentUpon>MaterialMetal.svc</DependentUpon>
     </Compile>
-    <Compile Include="Services\Reporte\IReportService.cs" />
-    <Compile Include="Services\Reporte\ReportService.svc.cs">
-      <DependentUpon>ReportService.svc</DependentUpon>
+    <Compile Include="Services\Report\IServiceReport.cs" />
+    <Compile Include="Services\Report\ServiceReport.svc.cs">
+      <DependentUpon>ServiceReport.svc</DependentUpon>
     </Compile>
     <Compile Include="Services\Seguridad\IServicioLogin.cs" />
     <Compile Include="Services\Seguridad\ServicioLogin.svc.cs">

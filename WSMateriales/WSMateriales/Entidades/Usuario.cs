@@ -20,5 +20,6 @@ namespace WSMateriales.Entidades
         public string Password { get; set; }
         public string Tipo { get; set; }
         public string Telefono { get; set; }
+        public string Clave { get; set; }
     }
 }

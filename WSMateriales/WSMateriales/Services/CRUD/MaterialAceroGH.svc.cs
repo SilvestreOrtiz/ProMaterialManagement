@@ -11,14 +11,14 @@ namespace WSMateriales.Services.CRUD
     {
         DataMasterEntities Mydata = new DataMasterEntities();
 
-        public AceroGHerramienta BucarId(string idMaterial)
+        public AceroGHerramienta BucarId(string id_acerogh)
         {
 
             {
                 AceroGHerramienta item = new AceroGHerramienta();
-                int ID = int.Parse(idMaterial);
+                int ID = int.Parse(id_acerogh);
                 var Query = from acerogh in Mydata.AceroGHerramienta
-                            where acerogh.idMaterial == ID
+                            where acerogh.id_acerogh == ID
                             select acerogh;
 
                 foreach (var result in Query)
@@ -55,7 +55,7 @@ namespace WSMateriales.Services.CRUD
 
         public bool Delete(AceroGHerramienta acerogh)
         {
-            AceroGHerramienta mate = Mydata.AceroGHerramienta.Find(acerogh.idMaterial);
+            AceroGHerramienta mate = Mydata.AceroGHerramienta.Find(acerogh.id_acerogh);
             Mydata.AceroGHerramienta.Remove(mate);
             Mydata.SaveChanges();
             return true;
@@ -65,7 +65,7 @@ namespace WSMateriales.Services.CRUD
 
         public void Edit(AceroGHerramienta acerogh)
         {
-            var item = Mydata.AceroGHerramienta.FirstOrDefault(x => x.idMaterial == acerogh.idMaterial);
+            var item = Mydata.AceroGHerramienta.FirstOrDefault(x => x.id_acerogh == acerogh.id_acerogh);
 
             item.Calidad = acerogh.Calidad;
             item.Perfil = acerogh.Perfil;

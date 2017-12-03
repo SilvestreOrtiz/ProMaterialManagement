@@ -14,7 +14,7 @@ namespace WSMateriales.Entidades
     
     public partial class AceroInoxidable
     {
-        public int idMaterial { get; set; }
+        public int id_aceroInox { get; set; }
         public string Calidad { get; set; }
         public string Perfil { get; set; }
         public string Acabado { get; set; }

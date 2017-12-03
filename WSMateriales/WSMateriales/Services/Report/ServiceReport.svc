@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WSMateriales.Services.Report.ServiceReport" CodeBehind="ServiceReport.svc.cs" %>

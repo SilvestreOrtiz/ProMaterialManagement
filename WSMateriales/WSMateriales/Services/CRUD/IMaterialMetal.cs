@@ -9,29 +9,27 @@ using WSMateriales.Entidades;
 
 namespace WSMateriales.Services.CRUD
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IMaterialAceroInoxi" en el código y en el archivo de configuración a la vez.
+    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IMaterialMetal" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
-    public interface IMaterialAceroInoxi
+    public interface IMaterialMetal
     {
-        [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "getAll", ResponseFormat = WebMessageFormat.Json)]
-        List<AceroInoxidable> BuscarTodos();
+        List<Metales> BuscarTodos();
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "get/{id_aceroInox}", ResponseFormat = WebMessageFormat.Json)]
-        AceroInoxidable BucarId(String id_aceroInox);
+        [WebInvoke(Method = "GET", UriTemplate = "get/{id_metal}", ResponseFormat = WebMessageFormat.Json)]
+        Metales BucarId(String id_metal);
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "create", ResponseFormat = WebMessageFormat.Json)]
-        bool Create(AceroInoxidable aceroinox);
+        bool Create(Metales metales);
 
         [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "edit", ResponseFormat = WebMessageFormat.Json)]
-        void Edit(AceroInoxidable aceroinox);
+        void Edit(Metales metales);
 
         [OperationContract]
         [WebInvoke(Method = "DELETE", UriTemplate = "delete", ResponseFormat = WebMessageFormat.Json)]
-        bool Delete(AceroInoxidable aceroinox);
+        bool Delete(Metales metales);
     }
 }
-

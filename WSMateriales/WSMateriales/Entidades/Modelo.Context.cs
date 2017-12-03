@@ -31,7 +31,6 @@ namespace WSMateriales.Entidades
         public virtual DbSet<HistorialMateriales> HistorialMateriales { get; set; }
         public virtual DbSet<Metales> Metales { get; set; }
         public virtual DbSet<Reporte> Reporte { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

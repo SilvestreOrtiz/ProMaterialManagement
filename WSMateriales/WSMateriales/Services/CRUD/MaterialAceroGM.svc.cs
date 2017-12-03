@@ -31,12 +31,12 @@ namespace WSMateriales.Services
             return lista;
         }
 
-        public AceroGMaquinaria ConsultarPorId(string idMaterial)
+        public AceroGMaquinaria ConsultarPorId(string id_acerogm)
         {
             AceroGMaquinaria item = new AceroGMaquinaria();
-            int ID = int.Parse(idMaterial);
+            int ID = int.Parse(id_acerogm);
             var Query = from acerogm in Mydata.AceroGMaquinaria
-                        where acerogm.idMaterial == ID
+                        where acerogm.id_acerogm == ID
                         select acerogm;
 
             foreach (var result in Query)
@@ -64,7 +64,7 @@ namespace WSMateriales.Services
 
         public void Editar(AceroGMaquinaria acerogm)
         {
-            var item = Mydata.AceroGMaquinaria.FirstOrDefault(x => x.idMaterial == acerogm.idMaterial);
+            var item = Mydata.AceroGMaquinaria.FirstOrDefault(x => x.id_acerogm == acerogm.id_acerogm);
 
             item.Calidad = acerogm.Calidad;
             item.Perfil = acerogm.Perfil;
@@ -76,7 +76,7 @@ namespace WSMateriales.Services
 
         public bool Eliminar(AceroGMaquinaria acerogm)
         {
-            AceroGMaquinaria mate = Mydata.AceroGMaquinaria.Find(acerogm.idMaterial);
+            AceroGMaquinaria mate = Mydata.AceroGMaquinaria.Find(acerogm.id_acerogm);
             Mydata.AceroGMaquinaria.Remove(mate);
             Mydata.SaveChanges();
             return true;

@@ -18,8 +18,8 @@ namespace WSMateriales.Services.CRUD
         List<AceroGHerramienta> BuscarTodos();
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "get/{idMaterial}", ResponseFormat = WebMessageFormat.Json)]
-        AceroGHerramienta BucarId(String idMaterial);
+        [WebInvoke(Method = "GET", UriTemplate = "get/{id_acerogh}", ResponseFormat = WebMessageFormat.Json)]
+        AceroGHerramienta BucarId(String id_acerogh);
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "create", ResponseFormat = WebMessageFormat.Json)]

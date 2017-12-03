@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DataMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DataMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AceroGHerramienta">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_acerogh" />
           </Key>
-          <Property Name="idMaterial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_acerogh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Calidad" Type="text" />
           <Property Name="Perfil" Type="text" />
           <Property Name="Acabado" Type="text" />
@@ -19,9 +19,9 @@
         </EntityType>
         <EntityType Name="AceroGMaquinaria">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_acerogm" />
           </Key>
-          <Property Name="idMaterial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_acerogm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Calidad" Type="text" />
           <Property Name="Perfil" Type="text" />
           <Property Name="Acabado" Type="text" />
@@ -30,9 +30,9 @@
         </EntityType>
         <EntityType Name="AceroInoxidable">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_aceroInox" />
           </Key>
-          <Property Name="idMaterial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_aceroInox" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Calidad" Type="text" />
           <Property Name="Perfil" Type="text" />
           <Property Name="Acabado" Type="text" />
@@ -51,9 +51,9 @@
         </EntityType>
         <EntityType Name="Metales">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_metal" />
           </Key>
-          <Property Name="idMaterial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_metal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Mineral" Type="text" />
           <Property Name="MateriaPrima" Type="text" />
           <Property Name="SemiFabricado" Type="text" />
@@ -66,17 +66,10 @@
           </Key>
           <Property Name="idReport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_Material" Type="int" />
-          <Property Name="id_Usuario" Type="int" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="fecha_report" Type="date" />
+          <Property Name="admin_proyecto" Type="text" />
+          <Property Name="nombre_proyecto" Type="text" />
+          <Property Name="descripcion_proyecto" Type="text" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -88,6 +81,7 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="Tipo" Type="nvarchar" MaxLength="50" />
           <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+          <Property Name="Clave" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="DataMasterModelStoreContainer">
           <EntitySet Name="AceroGHerramienta" EntityType="Self.AceroGHerramienta" Schema="dbo" store:Type="Tables" />
@@ -96,19 +90,17 @@
           <EntitySet Name="HistorialMateriales" EntityType="Self.HistorialMateriales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Metales" EntityType="Self.Metales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reporte" EntityType="Self.Reporte" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DataMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="AceroGHerramienta">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_acerogh" />
           </Key>
-          <Property Name="idMaterial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_acerogh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Calidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Perfil" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Acabado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -118,9 +110,9 @@
         </EntityType>
         <EntityType Name="AceroGMaquinaria">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_acerogm" />
           </Key>
-          <Property Name="idMaterial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_acerogm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Calidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Perfil" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Acabado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -129,9 +121,9 @@
         </EntityType>
         <EntityType Name="AceroInoxidable">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_aceroInox" />
           </Key>
-          <Property Name="idMaterial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_aceroInox" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Calidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Perfil" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Acabado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -150,9 +142,9 @@
         </EntityType>
         <EntityType Name="Metales">
           <Key>
-            <PropertyRef Name="idMaterial" />
+            <PropertyRef Name="id_metal" />
           </Key>
-          <Property Name="idMaterial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_metal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Mineral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="MateriaPrima" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="SemiFabricado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -165,17 +157,10 @@
           </Key>
           <Property Name="idReport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_Material" Type="Int32" />
-          <Property Name="id_Usuario" Type="Int32" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="fecha_report" Type="DateTime" Precision="0" />
+          <Property Name="admin_proyecto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nombre_proyecto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion_proyecto" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -187,6 +172,7 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Clave" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DataMasterEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AceroGHerramienta" EntityType="Self.AceroGHerramienta" />
@@ -195,7 +181,6 @@
           <EntitySet Name="HistorialMateriales" EntityType="Self.HistorialMateriales" />
           <EntitySet Name="Metales" EntityType="Self.Metales" />
           <EntitySet Name="Reporte" EntityType="Self.Reporte" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
         </EntityContainer>
       </Schema>
@@ -207,7 +192,7 @@
           <EntitySetMapping Name="AceroGHerramienta">
             <EntityTypeMapping TypeName="DataMasterModel.AceroGHerramienta">
               <MappingFragment StoreEntitySet="AceroGHerramienta">
-                <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+                <ScalarProperty Name="id_acerogh" ColumnName="id_acerogh" />
                 <ScalarProperty Name="Calidad" ColumnName="Calidad" />
                 <ScalarProperty Name="Perfil" ColumnName="Perfil" />
                 <ScalarProperty Name="Acabado" ColumnName="Acabado" />
@@ -220,7 +205,7 @@
           <EntitySetMapping Name="AceroGMaquinaria">
             <EntityTypeMapping TypeName="DataMasterModel.AceroGMaquinaria">
               <MappingFragment StoreEntitySet="AceroGMaquinaria">
-                <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+                <ScalarProperty Name="id_acerogm" ColumnName="id_acerogm" />
                 <ScalarProperty Name="Calidad" ColumnName="Calidad" />
                 <ScalarProperty Name="Perfil" ColumnName="Perfil" />
                 <ScalarProperty Name="Acabado" ColumnName="Acabado" />
@@ -232,7 +217,7 @@
           <EntitySetMapping Name="AceroInoxidable">
             <EntityTypeMapping TypeName="DataMasterModel.AceroInoxidable">
               <MappingFragment StoreEntitySet="AceroInoxidable">
-                <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+                <ScalarProperty Name="id_aceroInox" ColumnName="id_aceroInox" />
                 <ScalarProperty Name="Calidad" ColumnName="Calidad" />
                 <ScalarProperty Name="Perfil" ColumnName="Perfil" />
                 <ScalarProperty Name="Acabado" ColumnName="Acabado" />
@@ -255,7 +240,7 @@
           <EntitySetMapping Name="Metales">
             <EntityTypeMapping TypeName="DataMasterModel.Metales">
               <MappingFragment StoreEntitySet="Metales">
-                <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+                <ScalarProperty Name="id_metal" ColumnName="id_metal" />
                 <ScalarProperty Name="Mineral" ColumnName="Mineral" />
                 <ScalarProperty Name="MateriaPrima" ColumnName="MateriaPrima" />
                 <ScalarProperty Name="SemiFabricado" ColumnName="SemiFabricado" />
@@ -269,24 +254,17 @@
               <MappingFragment StoreEntitySet="Reporte">
                 <ScalarProperty Name="idReport" ColumnName="idReport" />
                 <ScalarProperty Name="id_Material" ColumnName="id_Material" />
-                <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DataMasterModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="fecha_report" ColumnName="fecha_report" />
+                <ScalarProperty Name="admin_proyecto" ColumnName="admin_proyecto" />
+                <ScalarProperty Name="nombre_proyecto" ColumnName="nombre_proyecto" />
+                <ScalarProperty Name="descripcion_proyecto" ColumnName="descripcion_proyecto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="DataMasterModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

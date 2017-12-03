@@ -13,12 +13,6 @@ namespace WSMateriales.Services.Seguridad
     public interface IServicioLogin
     {
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "encriptar/{password}", ResponseFormat = WebMessageFormat.Json)]
-        string Encriptar(string password);
-        [OperationContract]
-        [WebInvoke(UriTemplate = "desencriptar/{password}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "GET")]
-        string Desencriptar(string password);
-        [OperationContract]
         [WebInvoke(UriTemplate = "desconectar", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST")]
         bool Desconectar();
         [OperationContract]

@@ -27,27 +27,12 @@ namespace WSMateriales.Services.Seguridad
 
             return user;
         }
-        public string Desencriptar(string password)
-        {
-            string result = string.Empty;
-            byte[] decryted = Convert.FromBase64String(password);
-            //result = System.Text.Encoding.Unicode.GetString(decryted, 0, decryted.ToArray().Length);
-            result = System.Text.Encoding.Unicode.GetString(decryted);
-            return result;
-        }
+       
 
-        public string Encriptar(string password)
-        {
-            string result = string.Empty;
-            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(password);
-            result = Convert.ToBase64String(encryted);
-            return result;
-        }
 
         public bool Conectar(string email, string password)
         {
-            string p = Encriptar(password);
-            p = p + ",";
+           
             bool correcto = false;
             Usuario user = new Usuario();
             var Query = from usuario in Mydata.Usuario
@@ -58,8 +43,8 @@ namespace WSMateriales.Services.Seguridad
             {
                 user = result;
             }
-            p = Desencriptar(user.Password);
-            if (p.Equals(password))
+            
+            if (password.Equals(user.Password))
             {
                 correcto = true;
             }

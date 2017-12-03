@@ -74,6 +74,7 @@ namespace WSMateriales.Services.CRUD
 
             user.Nombre = users.Nombre;
             user.Password = users.Password;
+            user.Clave = users.Clave;
             user.Telefono = users.Telefono;
             user.Telefono = users.Tipo;
             user.Email = users.Email;

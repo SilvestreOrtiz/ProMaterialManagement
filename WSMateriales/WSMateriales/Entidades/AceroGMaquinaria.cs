@@ -14,7 +14,7 @@ namespace WSMateriales.Entidades
     
     public partial class AceroGMaquinaria
     {
-        public int idMaterial { get; set; }
+        public int id_acerogm { get; set; }
         public string Calidad { get; set; }
         public string Perfil { get; set; }
         public string Acabado { get; set; }

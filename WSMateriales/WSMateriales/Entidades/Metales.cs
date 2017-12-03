@@ -14,7 +14,7 @@ namespace WSMateriales.Entidades
     
     public partial class Metales
     {
-        public int idMaterial { get; set; }
+        public int id_metal { get; set; }
         public string Mineral { get; set; }
         public string MateriaPrima { get; set; }
         public string SemiFabricado { get; set; }
