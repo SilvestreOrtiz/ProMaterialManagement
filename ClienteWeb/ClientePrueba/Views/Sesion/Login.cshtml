@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<section>
+    <div id="wrapperBanner">
+        <div class="background">
+            <div class="banner">
+                <img src="~/Content/Banner1.png" />
+            </div>
+        </div>
+        <div class="raya"></div>
+        <div class="slogan">
+            <center><h2>ProAutomation</h2></center>
+            <img src="~/Content/edge-candy.svg" />
+        </div>
+    </div>
+</section>
+
+@using (Html.BeginForm("Sesion", "Sesion"))
+{
+    <div class="container">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="jumbotron" style="margin-top:75px">
+             <center><h3>Iniciar Sesion</h3></center>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <button type="submit" class=" btn btn-primary form-control">Conectarse</button>
+                    @Html.ActionLink("Olvide Mi contraseña", "Recuperar", "Sesion")
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-lg-4"></div>
+    </div>}

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ClientePrueba.MaterialMetales.Metales>
+
+@{
+    ViewBag.Title = "ListM";
+}
+
+<h2>Lista de Materiales</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+    id_metal
+</th>
+        
+        <th>
+            Estado
+        </th>
+        <th>
+            MateriaPrima
+        </th>
+        <th>
+            Mineral
+        </th>
+        <th>
+            SemiFabricado
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.metales) {
+    <tr>
+        <td>
+    @item.id_metal
+</td>
+        
+        <td>
+            @item.Estado
+        </td>
+        <td>
+            @item.MateriaPrima
+        </td>
+        <td>
+            @item.Mineral
+        </td>
+        <td>
+            @item.SemiFabricado
+        </td>
+        
+        <td>
+            @item.Cantidad
+        </td>
+    </tr>
+}
+
+</table>

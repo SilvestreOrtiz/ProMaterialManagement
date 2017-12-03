@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ClientePrueba.CUsuarios.Usuario>
+@{
+    ViewBag.Title = "Index";
+}
+<section>
+    <div id="wrapperBanner">
+        <div class="background">
+            <div class="banner">
+                <img src="~/Content/Banner1.png" />
+            </div>
+        </div>
+        <div class="raya"></div>
+        <div class="slogan">
+            <h2>Registrar</h2>
+            <P>Ingrese su informacion!!</P>
+            <img src="~/Content/edge-candy.svg" />
+        </div>
+    </div>
+</section>
+<div id="wrapperTable">
+    <h2>Lista de Usuarios</h2>
+    <p>
+        @Html.ActionLink("Nuevo Usuario", "Agregar","Usuarios")
+    </p>
+    <table class="table">
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in ViewBag.usuario)
+        {
+            <tr>
+                
+                <td>
+                    @item.Nombre
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Telefono
+                </td>
+                <td>
+                    @item.Tipo
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) ||
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

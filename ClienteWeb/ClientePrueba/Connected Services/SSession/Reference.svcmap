@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="85a109ad-0b31-476d-8616-4a0db047556b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58433/Services/Seguridad/ServicioLogin.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioLogin.disco" MetadataType="Disco" ID="30617b16-5870-4ed9-91cc-3bc76677fa20" SourceId="1" SourceUrl="http://localhost:58433/Services/Seguridad/ServicioLogin.svc?disco" />
+    <MetadataFile FileName="ServicioLogin.xsd" MetadataType="Schema" ID="f4fb7892-9188-4d81-9620-722349545dd3" SourceId="1" SourceUrl="http://localhost:58433/Services/Seguridad/ServicioLogin.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioLogin.wsdl" MetadataType="Wsdl" ID="eee9bb56-e3df-4114-bda1-412069c4b6b0" SourceId="1" SourceUrl="http://localhost:58433/Services/Seguridad/ServicioLogin.svc?wsdl" />
+    <MetadataFile FileName="ServicioLogin1.xsd" MetadataType="Schema" ID="20030c58-cf73-476c-8642-25b1b3c06ac6" SourceId="1" SourceUrl="http://localhost:58433/Services/Seguridad/ServicioLogin.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioLogin2.xsd" MetadataType="Schema" ID="501d1879-143d-49e7-9704-ffa16d5bd398" SourceId="1" SourceUrl="http://localhost:58433/Services/Seguridad/ServicioLogin.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
