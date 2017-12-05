@@ -37,7 +37,7 @@ namespace ClientePrueba.Controllers
             string ID = id_metal.ToString();
             MaterialMetales.Metales metales = C.encontrarUno(ID);
             C.eliminar(metales);
-            RedirectToAction("Consultar", "Metales");
+           
         }
         [HttpPost]
         public RedirectToRouteResult subir(MaterialMetales.Metales l)
@@ -51,6 +51,12 @@ namespace ClientePrueba.Controllers
         public RedirectToRouteResult Editar(MaterialMetales.Metales l)
         {
             C.editar(l);
+            return RedirectToAction("Consultar", "Metales");
+        }
+
+        public RedirectToRouteResult Delete(MaterialMetales.Metales l)
+        {
+            C.eliminar(l);
             return RedirectToAction("Consultar", "Metales");
         }
 
