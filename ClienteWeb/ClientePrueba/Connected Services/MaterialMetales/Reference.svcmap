@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7e7b3509-c9f2-4cf4-8639-9c41ae2606a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58433/Services/CRUD/MaterialMetal.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MaterialMetal.xsd" MetadataType="Schema" ID="99de52d8-4e8c-4801-940e-60912f9eeec5" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialMetal.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaterialMetal1.xsd" MetadataType="Schema" ID="14eadec2-d368-4ee4-be7d-e1a3bd245ee6" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialMetal.svc?xsd=xsd1" />
+    <MetadataFile FileName="MaterialMetal.wsdl" MetadataType="Wsdl" ID="d59fe8e0-69b3-4c7f-a3e0-2fd2b9bb7867" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialMetal.svc?wsdl" />
+    <MetadataFile FileName="MaterialMetal2.xsd" MetadataType="Schema" ID="9e588e34-ed54-480f-bc20-512c40a3c2cb" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialMetal.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaterialMetal.disco" MetadataType="Disco" ID="07a3e546-f346-4b2d-af3d-fa61db2280bd" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialMetal.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

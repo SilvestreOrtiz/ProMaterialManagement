@@ -1,0 +1,11 @@
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\WSMateriales.dll.config
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\WSMateriales.dll
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\WSMateriales.pdb
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\EntityFramework.dll
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\EntityFramework.SqlServer.dll
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\EntityFramework.xml
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\bin\EntityFramework.SqlServer.xml
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\obj\Debug\WSMateriales.csproj.CoreCompileInputs.cache
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\obj\Debug\WSMateriales.dll
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\obj\Debug\WSMateriales.pdb
+C:\Users\Silver\source\repos\WSMateriales\WSMateriales\obj\Debug\WSMateriales.csprojResolveAssemblyReference.cache

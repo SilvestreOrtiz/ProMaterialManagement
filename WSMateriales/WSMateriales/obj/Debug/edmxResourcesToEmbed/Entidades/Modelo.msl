@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataMasterModelStoreContainer" CdmEntityContainer="DataMasterEntities">
+    <EntitySetMapping Name="AceroGHerramienta">
+      <EntityTypeMapping TypeName="DataMasterModel.AceroGHerramienta">
+        <MappingFragment StoreEntitySet="AceroGHerramienta">
+          <ScalarProperty Name="id_acerogh" ColumnName="id_acerogh" />
+          <ScalarProperty Name="Calidad" ColumnName="Calidad" />
+          <ScalarProperty Name="Perfil" ColumnName="Perfil" />
+          <ScalarProperty Name="Acabado" ColumnName="Acabado" />
+          <ScalarProperty Name="Medidas" ColumnName="Medidas" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AceroGMaquinaria">
+      <EntityTypeMapping TypeName="DataMasterModel.AceroGMaquinaria">
+        <MappingFragment StoreEntitySet="AceroGMaquinaria">
+          <ScalarProperty Name="id_acerogm" ColumnName="id_acerogm" />
+          <ScalarProperty Name="Calidad" ColumnName="Calidad" />
+          <ScalarProperty Name="Perfil" ColumnName="Perfil" />
+          <ScalarProperty Name="Acabado" ColumnName="Acabado" />
+          <ScalarProperty Name="Medidas" ColumnName="Medidas" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AceroInoxidable">
+      <EntityTypeMapping TypeName="DataMasterModel.AceroInoxidable">
+        <MappingFragment StoreEntitySet="AceroInoxidable">
+          <ScalarProperty Name="id_aceroInox" ColumnName="id_aceroInox" />
+          <ScalarProperty Name="Calidad" ColumnName="Calidad" />
+          <ScalarProperty Name="Perfil" ColumnName="Perfil" />
+          <ScalarProperty Name="Acabado" ColumnName="Acabado" />
+          <ScalarProperty Name="Espesor" ColumnName="Espesor" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialMateriales">
+      <EntityTypeMapping TypeName="DataMasterModel.HistorialMateriales">
+        <MappingFragment StoreEntitySet="HistorialMateriales">
+          <ScalarProperty Name="id_Material" ColumnName="id_Material" />
+          <ScalarProperty Name="EntradaMaterial" ColumnName="EntradaMaterial" />
+          <ScalarProperty Name="SalidaMaterial" ColumnName="SalidaMaterial" />
+          <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metales">
+      <EntityTypeMapping TypeName="DataMasterModel.Metales">
+        <MappingFragment StoreEntitySet="Metales">
+          <ScalarProperty Name="id_metal" ColumnName="id_metal" />
+          <ScalarProperty Name="Mineral" ColumnName="Mineral" />
+          <ScalarProperty Name="MateriaPrima" ColumnName="MateriaPrima" />
+          <ScalarProperty Name="SemiFabricado" ColumnName="SemiFabricado" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reporte">
+      <EntityTypeMapping TypeName="DataMasterModel.Reporte">
+        <MappingFragment StoreEntitySet="Reporte">
+          <ScalarProperty Name="idReport" ColumnName="idReport" />
+          <ScalarProperty Name="id_Material" ColumnName="id_Material" />
+          <ScalarProperty Name="fecha_report" ColumnName="fecha_report" />
+          <ScalarProperty Name="admin_proyecto" ColumnName="admin_proyecto" />
+          <ScalarProperty Name="nombre_proyecto" ColumnName="nombre_proyecto" />
+          <ScalarProperty Name="descripcion_proyecto" ColumnName="descripcion_proyecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="DataMasterModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

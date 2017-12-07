@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ClienteWeb.MaterialAceroInoxidable.AceroInoxidable>
+
+@{
+    ViewBag.Title = "Consultar";
+}
+
+<center><h2>Lista de Materiales</h2></center>
+
+<p>
+    @Html.ActionLink("Agregar Material", "Agregar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+    id_aceroInox
+</th>
+        <th>
+            Acabado
+        </th>
+        <th>
+            Calidad
+        </th>
+       
+        <th>
+            Espesor
+        </th>
+        <th>
+            Perfil
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.aceroinox) {
+    <tr>
+        <td>
+    @item.id_aceroInox
+</td>
+        <td>
+            @item.Acabado
+        </td>
+       
+        <td>
+            @item.Cantidad
+        </td>
+        <td>
+            @item.Espesor
+        </td>
+        <td>
+            @item.Perfil
+        </td>
+        <td>
+            @item.Calidad
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id_aceroInox = item.id_aceroInox }) |
+            
+            @Html.ActionLink("Eliminar", "Delete", new { id_aceroInox = item.id_aceroInox })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="10ab1178-f0b9-45ff-b23e-ab4bb191fd8a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58433/Services/CRUD/AddUser.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AddUser.xsd" MetadataType="Schema" ID="69c5c0c9-9cbd-44b9-a20e-ab4ea0f87947" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/AddUser.svc?xsd=xsd2" />
+    <MetadataFile FileName="AddUser.disco" MetadataType="Disco" ID="67582d8f-3f3b-4042-af8f-683cedf4dfa7" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/AddUser.svc?disco" />
+    <MetadataFile FileName="AddUser1.xsd" MetadataType="Schema" ID="b8e50b98-13c6-475a-96fb-75a066a5fd44" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/AddUser.svc?xsd=xsd1" />
+    <MetadataFile FileName="AddUser2.xsd" MetadataType="Schema" ID="feaa5401-70af-4e78-8201-c441c7fd1863" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/AddUser.svc?xsd=xsd0" />
+    <MetadataFile FileName="AddUser.wsdl" MetadataType="Wsdl" ID="cac527f2-13f4-4ab5-80a6-db464db0213e" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/AddUser.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Recuperar";
+}
+
+@{
+    ViewBag.Title = "Login";
+}
+<section>
+    <div id="wrapperBanner">
+        <div class="background">
+            <div class="banner">
+                <center><img src="~/fonts/LogoAuto_qwy3d1_c_scale,w_200.png" /></center>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="Formulario">
+    <div class="Formulario2">
+        <h2>Recuperar Contraseña</h2>
+        @using (Html.BeginForm("EnviarCorreo", "Sesion"))
+        {
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="LabelEstilo">Email</label>
+                    <div class="col-md-10">
+                        <input type="email" required name="email" class="BotonEstilo" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default">Enviar</button>
+            </div>
+        }
+    </div>
+</div>

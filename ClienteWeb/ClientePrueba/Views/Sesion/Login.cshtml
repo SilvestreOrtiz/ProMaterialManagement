@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<div id="imgPro">
+     <center><img src="~/fonts/LogoAuto.png" /></center>
+</div>
+
+@using (Html.BeginForm("Sesion", "Sesion"))
+{
+    
+    <div class="container">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="jumbotron" style="margin-top:75px">
+             <center><h3>Iniciar Sesion</h3></center>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <button type="submit" class=" btn btn-primary form-control">Conectarse</button>
+                    <p><center><h5><u>@Html.ActionLink("olvide mi contraseña", "Recuperar", "Sesion")</u></h5></center></p>
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-lg-4"></div>
+    </div>}

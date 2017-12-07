@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ClienteWeb.MaterialAceroGH.AceroGHerramienta>
+
+@{
+    ViewBag.Title = "ListM";
+}
+
+<center>
+    <h2>Lista de Materiales</h2>
+</center>
+<table class="table">
+    <tr>
+        <th>
+    id_acerogh
+</th>
+        <th>
+            Acabado
+        </th>
+        <th>
+           Calidad
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+           Medidas
+        </th>
+        <th>
+           Perfil
+        </th>
+        <th>
+            Tipo
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.acerogh) {
+    <tr>
+        <td>
+    @item.id_acerogh
+</td>
+        <td>
+            @item.Acabado
+        </td>
+        <td>
+            @item.Calidad
+        </td>
+        <td>
+            @item.Cantidad
+        </td>
+        <td>
+            @item.Medidas
+        </td>
+        <td>
+            @item.Perfil
+        </td>
+        <td>
+            @item.Tipo
+        </td>
+        <td>
+            @Html.ActionLink("Seleccionar", "Details", new { id_acerogh = item.id_acerogh }) |
+        </td>
+        
+    </tr>
+}
+
+</table>

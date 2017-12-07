@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ProAutomation</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+            @if (Session["usuario"] == null)
+            {
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"></ul>
+                </div>
+            }
+            else
+            {
+
+                if (Session["usuario"].Equals("Admin"))
+                {
+                    <header>
+                        <span id="button-menu" class="fa fa-bars"></span>
+
+                        <nav class="navegacion">
+                            <ul class="menu">
+                                <!-- TITULAR -->
+                                <li class="title-menu">Todas las categorias</li>
+                                <!-- TITULAR -->
+                                <li class="item-submenu" menu="1">
+                                    <a href="#">Materiales</a>
+                                    <ul class="submenu">
+                                        <li class="title-menu">Tipos</li>
+                                        <li class="go-back">Atras</li>
+                                        <li>@Html.ActionLink("Aceros Grado Maquinaria", "Consultar", "AceroGMaquinaria")</li>
+                                        <li>@Html.ActionLink("Aceros Grado Herramienta", "Consultar", "AceroGHerramienta")</li>
+                                        <li>@Html.ActionLink("Metales", "Consultar", "Metales")</li>
+                                        <li>@Html.ActionLink("Acero Inoxidable", "Consultar", "AceroInoxidable")</li>
+                                    </ul>
+                                </li>
+                                <li>@Html.ActionLink("Usuarios", "Index", "Usuarios")</li>
+                                <li>@Html.ActionLink("Logout", "Logout", "Sesion")</li>
+                            </ul>
+                        </nav>
+                    </header>
+                }
+                else
+                {
+                    if (Session["usuario"].Equals("normal"))
+                    {
+                        <header>
+                            <span id="button-menu" class="fa fa-bars"></span>
+
+                            <nav class="navegacion">
+                                <ul class="menu">
+                                    <!-- TITULAR -->
+                                    <li class="title-menu">Todas las categorias</li>
+                                    <!-- TITULAR -->
+                                    <li class="item-submenu" menu="1">
+                                        <a href="#">Materiales</a>
+                                        <ul class="submenu">
+                                            <li class="title-menu">Tipos</li>
+                                            <li class="go-back">Atras</li>
+                                            <li>@Html.ActionLink("Aceros Grado Maquinaria", "ListM", "AceroGMaquinaria")</li>
+                                            <li>@Html.ActionLink("Aceros Grado Herramienta", "ListM", "AceroGHerramienta")</li>
+                                            <li>@Html.ActionLink("Metales", "ListM", "Metales")</li>
+                                            <li>@Html.ActionLink("Acero Inoxidable", "ListM", "AceroInoxidable")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Proyectos", "Consultar", "ProyectosReport")</li>
+                                    <li>@Html.ActionLink("Logout", "Logout", "Sesion")</li>
+                                </ul>
+                            </nav>
+                        </header>
+                    }
+                }
+
+            }
+
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - </p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

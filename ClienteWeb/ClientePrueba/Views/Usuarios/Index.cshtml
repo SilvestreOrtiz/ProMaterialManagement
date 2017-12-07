@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ClienteWeb.CUsuarios.Usuario>
+@{
+    ViewBag.Title = "Index";
+}
+<section>
+    <div id="wrapperBanner">
+        <div class="background">
+            <div class="banner">
+                <center><img src="~/fonts/LogoAuto_qwy3d1_c_scale,w_200.png" /></center>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="wrapperTable">
+    <center><h2>Lista de Usuarios</h2></center>
+    <p>
+        @Html.ActionLink("Nuevo Usuario", "Agregar","Usuarios")
+    </p>
+    <table class="table">
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in ViewBag.usuario)
+        {
+            <tr>
+                
+                <td>
+                    @item.Nombre
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Telefono
+                </td>
+                <td>
+                    @item.Tipo
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) ||
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ClientePrueba.WSReporte.Reporte>
+
+@{
+    ViewBag.Title = "Consultar";
+}
+
+<h2>Consultar</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo Proyecto", "Agregar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idReport)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_proyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.admin_proyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_proyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_report)
+        </th>
+
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.reporte) {
+    <tr>
+        <td>
+            @item.idReport
+        </td>
+        <td>
+            @item.nombre_proyecto
+        </td>
+        <td>
+            @item.admin_proyecto
+        </td>
+        <td>
+            @item.descripcion_proyecto
+        </td>
+        <td>
+            @item.fecha_report
+        </td>
+       
+        
+        
+        <td>
+            @Html.ActionLink("Lista de Materiales", "ListM", "AceroGHerramienta") |
+            @Html.ActionLink("Eliminar Reporte", "Delete", new { idReporte = item.idReport })
+        </td>
+    </tr>
+}
+
+</table>

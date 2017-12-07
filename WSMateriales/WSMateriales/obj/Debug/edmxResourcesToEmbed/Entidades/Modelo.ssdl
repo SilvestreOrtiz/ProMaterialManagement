@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataMasterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AceroGHerramienta">
+    <Key>
+      <PropertyRef Name="id_acerogh" />
+    </Key>
+    <Property Name="id_acerogh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Calidad" Type="text" />
+    <Property Name="Perfil" Type="text" />
+    <Property Name="Acabado" Type="text" />
+    <Property Name="Medidas" Type="text" />
+    <Property Name="Tipo" Type="text" />
+    <Property Name="Cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="AceroGMaquinaria">
+    <Key>
+      <PropertyRef Name="id_acerogm" />
+    </Key>
+    <Property Name="id_acerogm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Calidad" Type="text" />
+    <Property Name="Perfil" Type="text" />
+    <Property Name="Acabado" Type="text" />
+    <Property Name="Medidas" Type="text" />
+    <Property Name="Cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="AceroInoxidable">
+    <Key>
+      <PropertyRef Name="id_aceroInox" />
+    </Key>
+    <Property Name="id_aceroInox" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Calidad" Type="text" />
+    <Property Name="Perfil" Type="text" />
+    <Property Name="Acabado" Type="text" />
+    <Property Name="Espesor" Type="text" />
+    <Property Name="Cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="HistorialMateriales">
+    <Key>
+      <PropertyRef Name="id_Material" />
+    </Key>
+    <Property Name="id_Material" Type="int" Nullable="false" />
+    <Property Name="EntradaMaterial" Type="int" Nullable="false" />
+    <Property Name="SalidaMaterial" Type="int" />
+    <Property Name="FechaEntrada" Type="date" />
+    <Property Name="FechaSalida" Type="date" />
+  </EntityType>
+  <EntityType Name="Metales">
+    <Key>
+      <PropertyRef Name="id_metal" />
+    </Key>
+    <Property Name="id_metal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mineral" Type="text" />
+    <Property Name="MateriaPrima" Type="text" />
+    <Property Name="SemiFabricado" Type="text" />
+    <Property Name="Estado" Type="text" />
+    <Property Name="Cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="idReport" />
+    </Key>
+    <Property Name="idReport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Material" Type="int" />
+    <Property Name="fecha_report" Type="date" />
+    <Property Name="admin_proyecto" Type="text" />
+    <Property Name="nombre_proyecto" Type="text" />
+    <Property Name="descripcion_proyecto" Type="text" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tipo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="Clave" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="DataMasterModelStoreContainer">
+    <EntitySet Name="AceroGHerramienta" EntityType="Self.AceroGHerramienta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AceroGMaquinaria" EntityType="Self.AceroGMaquinaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AceroInoxidable" EntityType="Self.AceroInoxidable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorialMateriales" EntityType="Self.HistorialMateriales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metales" EntityType="Self.Metales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reporte" EntityType="Self.Reporte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

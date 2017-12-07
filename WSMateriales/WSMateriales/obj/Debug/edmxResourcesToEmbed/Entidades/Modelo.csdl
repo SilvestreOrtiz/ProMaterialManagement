@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AceroGHerramienta">
+    <Key>
+      <PropertyRef Name="id_acerogh" />
+    </Key>
+    <Property Name="id_acerogh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Perfil" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Acabado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Medidas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AceroGMaquinaria">
+    <Key>
+      <PropertyRef Name="id_acerogm" />
+    </Key>
+    <Property Name="id_acerogm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Perfil" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Acabado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Medidas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AceroInoxidable">
+    <Key>
+      <PropertyRef Name="id_aceroInox" />
+    </Key>
+    <Property Name="id_aceroInox" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Calidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Perfil" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Acabado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Espesor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HistorialMateriales">
+    <Key>
+      <PropertyRef Name="id_Material" />
+    </Key>
+    <Property Name="id_Material" Type="Int32" Nullable="false" />
+    <Property Name="EntradaMaterial" Type="Int32" Nullable="false" />
+    <Property Name="SalidaMaterial" Type="Int32" />
+    <Property Name="FechaEntrada" Type="DateTime" Precision="0" />
+    <Property Name="FechaSalida" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Metales">
+    <Key>
+      <PropertyRef Name="id_metal" />
+    </Key>
+    <Property Name="id_metal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mineral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MateriaPrima" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SemiFabricado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="idReport" />
+    </Key>
+    <Property Name="idReport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Material" Type="Int32" />
+    <Property Name="fecha_report" Type="DateTime" Precision="0" />
+    <Property Name="admin_proyecto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_proyecto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion_proyecto" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Clave" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DataMasterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AceroGHerramienta" EntityType="Self.AceroGHerramienta" />
+    <EntitySet Name="AceroGMaquinaria" EntityType="Self.AceroGMaquinaria" />
+    <EntitySet Name="AceroInoxidable" EntityType="Self.AceroInoxidable" />
+    <EntitySet Name="HistorialMateriales" EntityType="Self.HistorialMateriales" />
+    <EntitySet Name="Metales" EntityType="Self.Metales" />
+    <EntitySet Name="Reporte" EntityType="Self.Reporte" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+  </EntityContainer>
+</Schema>

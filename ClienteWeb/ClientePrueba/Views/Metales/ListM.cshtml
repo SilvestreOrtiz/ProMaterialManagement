@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ClienteWeb.MaterialMetales.Metales>
+
+@{
+    ViewBag.Title = "ListM";
+}
+<section>
+    <div id="wrapperBanner">
+        <div class="background">
+            <div class="banner">
+                <center><img src="~/fonts/LogoAuto_qwy3d1_c_scale,w_200.png" /></center>
+            </div>
+        </div>
+    </div>
+</section>
+<center><h2>Lista de Materiales</h2></center>
+
+
+<table class="table">
+    <tr>
+        <th>
+    id_metal
+</th>
+        
+        <th>
+            Estado
+        </th>
+        <th>
+            MateriaPrima
+        </th>
+        <th>
+            Mineral
+        </th>
+        <th>
+            SemiFabricado
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.metales) {
+    <tr>
+        <td>
+    @item.id_metal
+</td>
+        
+        <td>
+            @item.Estado
+        </td>
+        <td>
+            @item.MateriaPrima
+        </td>
+        <td>
+            @item.Mineral
+        </td>
+        <td>
+            @item.SemiFabricado
+        </td>
+        
+        <td>
+            @item.Cantidad
+        </td>
+        <td>
+            @Html.ActionLink("Seleccionar", "Details", new { id_metal = item.id_metal })|
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2d413d9f-51a3-424e-9575-1bdb58a63c3b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58433/Services/CRUD/MaterialAceroInoxi.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MaterialAceroInoxi.xsd" MetadataType="Schema" ID="4c238fa6-5955-4a92-af37-9ed953db728f" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialAceroInoxi.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaterialAceroInoxi.wsdl" MetadataType="Wsdl" ID="a79d9dbe-b844-4768-992f-129b5443a9cf" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialAceroInoxi.svc?wsdl" />
+    <MetadataFile FileName="MaterialAceroInoxi.disco" MetadataType="Disco" ID="d802d3a9-b7ff-401d-9c4e-1a1c5276f81f" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialAceroInoxi.svc?disco" />
+    <MetadataFile FileName="MaterialAceroInoxi1.xsd" MetadataType="Schema" ID="4e211b07-7697-4fc5-b2d8-a212fee9030b" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialAceroInoxi.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaterialAceroInoxi2.xsd" MetadataType="Schema" ID="8b3a154a-5e62-4d7b-ad6f-c59e7ade5a08" SourceId="1" SourceUrl="http://localhost:58433/Services/CRUD/MaterialAceroInoxi.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
